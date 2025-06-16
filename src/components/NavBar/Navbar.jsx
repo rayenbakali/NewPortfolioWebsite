@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { NavMenu } from "./nav-menu";
-import { NavigationSheet } from "./navigation-sheet";
+import { Sidebar } from "./navigation-sheet";
 
-const Navbar04Page = () => {
+const Navbar = () => {
   return (
     <div className="bg-muted">
       <nav
@@ -18,7 +18,7 @@ const Navbar04Page = () => {
             <Button className="rounded-full">Contact me</Button>
             {/* Mobile Menu */}
             <div className="md:hidden">
-              <NavigationSheet />
+              <Sidebar />
             </div>
           </div>
         </div>
@@ -27,4 +27,4 @@ const Navbar04Page = () => {
   );
 };
 
-export default Navbar04Page;
+export default Navbar;

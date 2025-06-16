@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, ArrowDownCircle, ArrowUpRight } from "lucide-react";
+import { ArrowDownCircle, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [titleIndex, setTitleIndex] = useState(0);
@@ -9,7 +10,7 @@ const HeroSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-    }, 2000);
+    }, 1500);
     return () => clearInterval(interval);
   }, [titles]);
   return (
@@ -18,7 +19,7 @@ const HeroSection = () => {
         <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl md:leading-[1.2] font-bold">
           Hi im Rayen Bakali
         </h1>
-        <h1 className="text-2xl font-bold">
+        <h1 className="text-2xl font-bold pt-4">
           <motion.span
             key={titleIndex}
             className="inline-block"
@@ -37,13 +38,15 @@ const HeroSection = () => {
           <Button size="lg" className="rounded-full text-base">
             Get to know me <ArrowDownCircle className="!h-5 !w-5" />
           </Button>
-          <Button
+          <Button 
             variant="outline"
             size="lg"
             className="rounded-full text-base shadow-none"
           >
-            My other side
-            <ArrowUpRight className="!h-5 !w-5" />
+            <Link to="/about" className="flex items-center gap-2">
+              My other side
+              <ArrowUpRight className="!h-5 !w-5" />
+            </Link>
           </Button>
         </div>
       </div>

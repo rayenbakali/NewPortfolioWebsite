@@ -6,9 +6,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Link } from "react-router-dom";
 
-// Note: Link component needs to be imported from react-router-dom
-// import { Link } from "react-router-dom";
-
 export const NavMenu = (props) => (
   <NavigationMenu {...props}>
     <NavigationMenuList
