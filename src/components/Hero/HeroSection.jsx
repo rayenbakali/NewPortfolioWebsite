@@ -14,7 +14,7 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, [titles]);
   return (
-    <div className="h-screen flex items-center justify-center px-6">
+    <div id="home" className="h-screen flex items-center justify-center px-6">
       <div className="text-center max-w-2xl">
         <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl md:leading-[1.2] font-bold">
           Hi im Rayen Bakali

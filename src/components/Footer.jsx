@@ -9,34 +9,30 @@ import { Link } from "react-router-dom";
 
 const footerLinks = [
   {
-    title: "Overview",
-    href: "#",
+    title: "Home",
+    href: "#home",
   },
   {
-    title: "Features",
-    href: "#",
+    title: "About",
+    href: "#about",
   },
   {
-    title: "Pricing",
-    href: "#",
+    title: "Projects",
+    href: "#projects",
   },
   {
-    title: "Careers",
-    href: "#",
+    title: "Services",
+    href: "#services",
   },
   {
-    title: "Help",
-    href: "#",
-  },
-  {
-    title: "Privacy",
-    href: "#",
+    title: "Contact",
+    href: "#contact",
   },
 ];
 
 const Footer = () => {
   return (
-    <div className="flex flex-col">
+    <div id="contact" className="flex flex-col">
       <Separator />
       <div className="grow bg-muted" />
       <footer>
@@ -48,12 +44,12 @@ const Footer = () => {
             <ul className="mt-6 flex items-center gap-4 flex-wrap">
               {footerLinks.map(({ title, href }) => (
                 <li key={title}>
-                  <Link
+                  <a
                     href={href}
                     className="text-muted-foreground hover:text-foreground font-medium"
                   >
                     {title}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

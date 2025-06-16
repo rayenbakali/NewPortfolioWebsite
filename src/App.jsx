@@ -3,17 +3,17 @@ import HeroSection from "./components/Hero/HeroSection"
 import Footer from "./components/Footer"
 import WorkTimeline from "./components/WorkTimeline"
 import { Separator } from "./components/ui/separator"
-function App() {
 
+function App() {
   return (
     <>
-      <Navbar />
-      <HeroSection />
-      <Separator className="w-full" />
-      <WorkTimeline />
-      <Separator className="w-full" />
-      <Footer />
-    </>
+      <Navbar/>
+      <HeroSection id="home"/>
+      <Separator />  
+      <WorkTimeline id="about"/>
+      <Separator />
+      <Footer id="contact"/>
+    </> 
   );
 }
 
