@@ -1,11 +1,8 @@
 import { Separator } from "@/components/ui/separator";
 import {
-  DribbbleIcon,
   GithubIcon,
-  TwitchIcon,
-  TwitterIcon,
+  LinkedinIcon,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const footerLinks = [
   {
@@ -59,25 +56,19 @@ const Footer = () => {
             {/* Copyright */}
             <span className="text-muted-foreground">
               &copy; {new Date().getFullYear()}{" "}
-              <Link to="/" target="_blank">
+              <a href="https://www.linkedin.com/in/rayen-bakali-50b987190/" className="font-bold hover:text-foreground" target="_blank">
                 Rayen Bakali
-              </Link>
+              </a>
               . All rights reserved.
             </span>
 
             <div className="flex items-center gap-5 text-muted-foreground">
-              <Link to="#" target="_blank">
-                <TwitterIcon className="h-5 w-5" />
-              </Link>
-              <Link to="#" target="_blank">
-                <DribbbleIcon className="h-5 w-5" />
-              </Link>
-              <Link to="#" target="_blank">
-                <TwitchIcon className="h-5 w-5" />
-              </Link>
-              <Link to="#" target="_blank">
+              <a href="https://www.linkedin.com/in/rayen-bakali-50b987190/" target="_blank">
+                <LinkedinIcon className="h-5 w-5" />
+              </a>
+              <a href="https://github.com/rayenbakali" target="_blank">
                 <GithubIcon className="h-5 w-5" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
