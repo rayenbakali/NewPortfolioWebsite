@@ -1,32 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Building2, Calendar } from "lucide-react";
+import { experiences } from "../config/data";
 
-const experiences = [
-  {
-    title: "Senior Full Stack Developer",
-    company: "TechCorp Solutions",
-    period: "2023 - Present",
-    description:
-      "Led the development of enterprise-scale web applications, mentored junior developers, and implemented best practices for code quality and performance optimization.",
-    technologies: ["React", "Node.js", "TypeScript", "AWS", "MongoDB"],
-  },
-  {
-    title: "Full Stack Developer",
-    company: "Digital Innovations Inc",
-    period: "2021 - 2023",
-    description:
-      "Developed and maintained multiple client projects, implemented responsive designs, and integrated third-party APIs for enhanced functionality.",
-    technologies: ["React", "Express.js", "PostgreSQL", "Docker", "Redis"],
-  },
-  {
-    title: "Frontend Developer",
-    company: "WebTech Studios",
-    period: "2018 - 2021",
-    description:
-      "Created responsive and interactive user interfaces, collaborated with designers, and optimized application performance.",
-    technologies: ["React", "JavaScript", "SASS", "Webpack", "Jest"],
-  },
-];
 
 const WorkTimeline = () => {
   return (
@@ -36,7 +11,7 @@ const WorkTimeline = () => {
         <div className="absolute left-0 top-4 bottom-0 border-l-2" />
 
         {experiences.map(
-          ({ company, description, period, technologies, title }, index) => (
+          ({ company, description, period, technologies, title }, index) => ( 
             <div key={index} className="relative pl-8 pb-12 last:pb-0">
               {/* Timeline dot */}
               <div className="absolute h-3 w-3 -translate-x-1/2 left-px top-3 rounded-full border-2 border-primary bg-background" />
