@@ -4,7 +4,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { Link } from "react-router-dom";
 
 const navLinks = [
   {
@@ -18,6 +17,10 @@ const navLinks = [
   {
     title: "Projects",
     href: "#projects",
+  },
+  {
+    title: "Partnerships",
+    href: "#partnerships",
   },
   {
     title: "Services",

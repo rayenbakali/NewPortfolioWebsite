@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown,Paintbrush } from "lucide-react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo} from "react";
+import { HeroHighlight } from "./HeroHighlight";
 
 const HeroSection = () => {
   const [titleIndex, setTitleIndex] = useState(0);
-  const titles = ["Software engineer", "Graphic designer", "Freelancer"];
+  const titles = useMemo(() => ["Software engineer", "Graphic designer", "Freelancer"], []);
   useEffect(() => {
     const interval = setInterval(() => {
       setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
@@ -13,12 +15,13 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, [titles]);
   return (
-    <div id="home" className="h-screen flex items-center justify-center px-6">
-      <div className="text-center max-w-2xl">
+    <div id="home" className="h-[calc(100vh-100px)] p-0 flex items-center justify-center max-w-screen-xl">
+      <div className="text-center">
+        <HeroHighlight >
         <h1 className="text-4xl sm:text-5xl md:text-6xl md:leading-[1.2] font-bold">
           Hi im Rayen Bakali
         </h1>
-        <h1 className="text-2xl font-bold pt-4">
+        <h1 className="text-2xl font-bold">
           <motion.span
             key={titleIndex}
             className="inline-block"
@@ -41,13 +44,14 @@ const HeroSection = () => {
             variant="outline"
             size="lg"
             className="rounded-full text-base shadow-none"
-          >
+            >
             <a href="https://www.behance.net/lazerxtv"  target="_blank" className="flex items-center gap-2">
               My other side
               <Paintbrush className="!h-5 !w-5" />
             </a>
           </Button>
         </div>
+            </HeroHighlight>
       </div>
     </div>
   );
